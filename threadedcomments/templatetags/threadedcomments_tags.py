@@ -83,7 +83,7 @@ class CommentFormNode(BaseThreadedCommentNode):
             parent_id = self.parent.resolve(context, ignore_failures=True)
         if object_pk:
             return comments.get_form()(
-                ctype.get_object_for_this_type(pk=object_pk), parent=parent_id)
+                ctype.get_object_for_this_type(pk=object_pk))
         else:
             return None
 
